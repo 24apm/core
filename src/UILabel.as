@@ -15,6 +15,7 @@ package
 		public function set text(text:String):void
 		{
 			_textField.text = text;	
+			_textField.autoSize = "left";
 		}
 		public function get text():String
 		{
@@ -26,7 +27,7 @@ package
 			_textField = new TextField();
 			addChild(_textField);
 			
-			_textField.text = _text;
+			this.text = _text;
 		}
 		
 		public override function destruct():void

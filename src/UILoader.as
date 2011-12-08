@@ -1,6 +1,7 @@
 package
 {
 	import flash.display.Loader;
+	import flash.display.MovieClip;
 	import flash.errors.IOError;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
@@ -10,7 +11,7 @@ package
 	public class UILoader extends UIElement
 	{
 		private var _url:String;
-		private var _loader:Loader;
+		protected var _loader:Loader;
 		public function UILoader(url:String)
 		{
 			super();
@@ -25,16 +26,31 @@ package
 			var loaderContext:LoaderContext = new LoaderContext();
 			_loader.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
 			_loader.load(urlRequest, loaderContext);
+			_loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loadedHandler);
+			
 			addChild(_loader);
 		}
 		private function ioErrorHandler(e:IOError):void
 		{
 			trace("ioErrorHandler: " + e);
 		}
+		private function finishAni(e:Event):void
+		{
+			removeEventListener(Event.COMPLETE, finishAni);
+			destruct();
+		}
+		protected function loadedHandler(e:Event  = null):void
+		{
+			// override
+			_loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, loadedHandler);
+			
+		}
 		public override function destruct():void
 		{
 			if(_loader != null)
-			{
+			{	_loader.removeEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+				_loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, loadedHandler);
+				
 				removeChild(_loader);
 				_loader = null;
 			}
