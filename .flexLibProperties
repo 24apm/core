@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="UIElement"/>
+    <classEntry path="UILoader"/>
+    <classEntry path="util.Util"/>
+    <classEntry path="event.ItemEvent"/>
+    <classEntry path="UILabel"/>
+    <classEntry path="UIGrid"/>
+    <classEntry path="AppVars"/>
+    <classEntry path="data.DirectionData"/>
+    <classEntry path="UIDirectionalElement"/>
+    <classEntry path="util.Tester"/>
+    <classEntry path="util.Layer"/>
+    <classEntry path="request.PlatformUtil"/>
+    <classEntry path="config.UILoaderConfig"/>
+    <classEntry path="request.HTTPLite"/>
+    <classEntry path="ui.Minimap"/>
+    <classEntry path="util.DrawShape"/>
+    <classEntry path="style.RectangleStyle"/>
+    <classEntry path="ui.Scroller"/>
+    <classEntry path="ui.Scrollable"/>
+    <classEntry path="config.ScrollerConfig"/>
+    <classEntry path="ui.ScrollerArrows"/>
+    <classEntry path="config.ScrollerArrowsConfig"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
