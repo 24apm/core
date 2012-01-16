@@ -23,6 +23,15 @@
     <classEntry path="config.ScrollerConfig"/>
     <classEntry path="ui.ScrollerArrows"/>
     <classEntry path="config.ScrollerArrowsConfig"/>
+    <classEntry path="modal.ModalManager"/>
+    <classEntry path="view.ViewManager"/>
+    <classEntry path="view.BasicView"/>
+    <classEntry path="modal.UIModel"/>
+    <classEntry path="config.AssetTranslationTable"/>
+    <classEntry path="config.GameSetting"/>
+    <classEntry path="style.Style"/>
+    <classEntry path="style.UILabelStyle"/>
+    <classEntry path="ui.UILoaderButton"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

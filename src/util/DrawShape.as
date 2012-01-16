@@ -21,5 +21,20 @@ package util
 			g.drawRect(recConfig.x, recConfig.y, recConfig.width, recConfig.height);
 			g.endFill();
 		}
+		public static function drawRoundRect(g:Graphics, recConfig:Rectangle, recStyle:RectangleStyle = null):void
+		{
+			if(recStyle == null)
+				recStyle = new RectangleStyle();
+			g.beginFill(recStyle.color, recStyle.alpha);
+			g.drawRoundRect(recConfig.x, recConfig.y, recConfig.width, recConfig.height, recStyle.ellipseWidth, recStyle.ellipseHeight);
+			g.endFill();
+		}		
+		public static function drawBitmapRoundRect(g:Graphics, recConfig:Rectangle, recStyle:RectangleStyle = null):void
+		{
+			if(recStyle.bitmap)
+				g.beginBitmapFill(recStyle.bitmap);
+			g.drawRoundRect(recConfig.x, recConfig.y, recConfig.width, recConfig.height, recStyle.ellipseWidth, recStyle.ellipseHeight);
+			g.endFill();
+		}	
 	}
 }

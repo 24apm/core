@@ -5,7 +5,7 @@ package config
 
 	public class ScrollerConfig
 	{
-		public var scrollablesPerPage:uint;
+		public var scrollablesPerRow:uint;
 		public var spacing:uint;
 		public var scrollableSize:Point;
 		public var scrollerSize:Point;
@@ -18,7 +18,7 @@ package config
 			this.scrollableSize		= scrollableSize;
 			this.scrollerSize 		= scrollerSize;
 			this.spacing 			= spacing;
-			this.scrollablesPerPage	= scrollablesPerPage;
+			this.scrollablesPerRow	= scrollablesPerPage;
 			
 			this.scrollerRows		= scrollerRows;
 		}

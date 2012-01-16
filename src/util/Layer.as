@@ -2,6 +2,8 @@ package util
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	
+	import modal.ModalManager;
 
 	public class Layer extends UIElement
 	{
@@ -23,6 +25,8 @@ package util
 			
 			charLayer = new Sprite();
 			addChild(charLayer);
+			
+			addChild(ModalManager.modalLayer);
 		}
 	}
 }

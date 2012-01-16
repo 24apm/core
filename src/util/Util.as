@@ -21,6 +21,11 @@ package util
 		{
 			return Math.floor(rand(min, max));
 		}
+		public static function getTimeStamp():Number
+		{
+			var now:Date = new Date();
+			return now.getTime();
+		}
 
 
 	}

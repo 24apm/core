@@ -10,6 +10,7 @@ package ui
 	import flash.geom.Rectangle;
 	
 	import style.RectangleStyle;
+	import style.Style;
 	
 	import util.DrawShape;
 
@@ -46,9 +47,9 @@ package ui
 			for (var i:uint = 0 ; i < 1; i++)
 			{
 				map = new UIElement();
-				map.addChild(new UILabel(i.toString()));
+				map.addChild(new UILabel(i.toString(), Style.labelStyleBasic));
 				DrawShape.drawRect(map.graphics, _mapConfig, _mapStyle);
-				scrollables.push(new Scrollable(map));
+				//scrollables.push(new Scrollable(map));
 			}
 			_scrollerMap = new Scroller(scrollables, config);
 			

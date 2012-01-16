@@ -41,12 +41,12 @@ package ui
 		}
 		private function onLeftClick(e:MouseEvent):void
 		{
-			_scroller.scrollTo(_scroller.currentIndex - _scroller.config.scrollablesPerPage - 1);
+			_scroller.scrollTo(_scroller.currentIndex - _scroller.config.scrollablesPerRow*_scroller.config.scrollerRows - 1);
 			
 		}
 		private function onRightClick(e:MouseEvent):void
 		{
-			_scroller.scrollTo(_scroller.currentIndex + _scroller.config.scrollablesPerPage + 1);
+			_scroller.scrollTo(_scroller.currentIndex + _scroller.config.scrollablesPerRow*_scroller.config.scrollerRows + 1);
 			
 		}
 	}
