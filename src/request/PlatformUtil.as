@@ -1,5 +1,7 @@
 package request
 {
+	//import com.adobe.serialization.json.JSON;
+	
 	import com.adobe.serialization.json.JSON;
 	
 	import flash.external.ExternalInterface;
@@ -24,12 +26,12 @@ package request
 		public static function call(funcName:String, onComplete:Function = null, funcParams:Object = null):void
 		{
 			_calls[_token] = onComplete;
-			trace("platform call: token:" + String(_token) + ", funcName:" + funcName + ", params:" + JSON.encode(funcParams));
+			//trace("platform call: token:" + String(_token) + ", funcName:" + funcName + ", params:" + JSON.encode(funcParams));
 			ExternalInterface.call(funcName, _token++, funcParams);	
 		}
 		protected static function callback(token:uint, callbackParams:Object = null):void
 		{
-			trace("patformCallBack: token:" + String(_token) + ", params:" + JSON.encode(callbackParams));
+			//trace("patformCallBack: token:" + String(_token) + ", params:" + JSON.encode(callbackParams));
 
 			if(_calls[token])
 			{
